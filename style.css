@@ -1,0 +1,788 @@
+@font-face {
+    font-family:font ;
+    src: url(https://www.nasa.gov/wp-content/client-mu-plugins/uswds-framework/uswds/fonts/public-sans/PublicSans-Regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: font;
+}
+.main{
+    height: 100%;
+    width: 100%;
+}
+/* header */
+.header{
+    height: 100%;
+    width: 100%;
+    padding: 1vw 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+/* header svg */
+.header svg{
+    color: white;
+    fill: #fff;
+    height: 1vw;
+    width: 1vw;
+}
+/* left */
+.main .left{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+/* input */
+.main .left .search input{
+    padding: 0.5vw 0.8vw;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    background-color: rgb(0, 0, 0);
+    width: 12vw;
+    height: 2vw;
+}
+.main .left .search ::placeholder{
+    font-size: 0.8vw;
+}
+/* explore */
+.explore-drop #flex{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    position: relative;
+    cursor: pointer;
+}
+.explore-drop #flex h1{
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.explore-drop #flex svg:hover{
+    transform: rotate(180deg);
+}
+/* .explore-drop #flex #move{
+    
+} */
+.rotated {
+    transform: rotate(180deg); /* Rotate 180 degrees */
+}
+/* drop-down */
+.header .left .explore-drop #drop{
+    display: flex;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    color: white; 
+    padding: 2vw 4vw;
+    top: 4vw;
+    left: 0vw; 
+    max-height: 0;
+    opacity: 0;
+    height: 50vw;
+    z-index: 25;
+    /* display: none; */
+    transition: max-height 0.9s ease, opacity 0.9s ease;
+    /* pointer-events: none; */
+}
+.header .left #drop .lefts{
+    border-right: 1px solid rgba(128, 128, 128, 0.199);
+    
+}
+.header .left #drop .lefts h3{
+    line-height: 2.3vw;
+    font-size: 0.9vw;
+    font-weight: lighter;
+    cursor: pointer;
+    width: 8vw;
+    margin-right: 8vw;
+}
+
+.header .left #drop .lefts h3:hover{
+   border-bottom: 2px dotted white;
+}
+/* drop-down-right */
+.header .left #drop .rights{
+    margin-left: 7vw;
+    display: flex;
+    gap: 1vw;
+}
+.header .left #drop .rights .container h2{
+    font-size: 0.7vw;
+    padding-bottom: 1vw;
+    text-transform: uppercase;
+    color: gray;
+}
+.header .left #drop .rights .container h3{
+    font-size: 0.6vw;
+    color: white;
+    cursor: pointer;
+    font-weight: lighter;
+    letter-spacing: 0.3vw;
+    padding: 0.6vw 0;
+}
+.header .left #drop .rights .container h1{
+    font-size: 1vw;
+    color: white;
+    font-weight: lighter;
+    width: 22vw;
+    padding: 0.6vw 0;
+}
+.header .left #drop .rights .container .text h4{
+    font-size: 0.6vw;
+    color: gray;
+}
+.header .left #drop .rights .container .image{
+    width: 20vw;
+    height: 15vw;
+    overflow: hidden;
+    object-fit: cover;
+}
+.header .left #drop .rights .container .image img{
+    height: 100%;
+   
+}
+.header .left #drop .rights .main-icon{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+.header .left #drop .rights .icon{
+    align-items: center;
+    display: flex;
+    gap: 0.3vw;
+}
+.header .left #drop .rights .icon svg{
+    height: 0.9vw;
+}
+.header .left #drop .rights .icon span{
+    font-size: 0.6vw;
+    color: rgb(138, 136, 136);
+    font-weight: bolder;
+}
+
+/* for nasa icon */
+.header .center{
+    height: 3vw;
+}
+.header .center img{
+    height: 100%;
+}
+/* right */
+.header .right{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+}
+/* new event */
+.header .right .New-Events-drop{
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    cursor: pointer;
+}
+.header .right .New-Events-drop h1{
+    color: white;
+    font-size: 1vw;
+    width: 7vw;
+}
+.header .right .New-Events-drop svg{
+    cursor: pointer;
+}
+.header #sdrop{
+    position: absolute;
+    top: 3vw;
+    background-color: black;
+    padding: 1vw 1vw;
+    /* max-height: 0;
+    opacity: 0; */
+    display: ;
+    transition: max-height 0.9s ease, opacity 0.9s ease;
+    z-index: 88;
+}
+.header #sdrop h2{
+    color: white;
+    line-height: 2vw;
+    font-size: 0.8vw;
+    font-weight: lighter;
+}
+.header #sdrop .flex{
+    display: flex;
+    gap: 0.7vw;
+}
+.header #sdrop .flex svg{
+    height: 1.2vw;
+    width: 1.2vw;
+}
+.header #sdrop .flex svg circle{
+    fill: #ff0000;
+}
+.header #sdrop .flex svg circle:hover{
+    fill: #851b17;
+    cursor: pointer;
+}
+.header #sdrop .flex h1{
+    color: white;
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+    
+}
+/* multimedia */
+.header .right .Multimedia-drop{
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+.header .right .Multimedia-drop h1{
+    color: white;
+    font-size: 1vw;
+}
+/* text */
+.header .right .text h1{
+    color: white;
+    font-size: 0.9vw;
+}
+/* section2 */
+.section2{
+    height: 100%;
+    width: 100%;
+}
+/* .section2::after{
+    content: '';
+    background-image: url(https://www.nasa.gov/wp-content/uploads/2024/11/54156042005-3240ab54d4-o.jpg?resize=2048,1365);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+} */
+ .section2 .image{
+    height: 37vw;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+ }
+ .section2 .shade{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.897), rgba(255, 255, 255, 0)); 
+    position: absolute;
+    height: 37vw;
+    width: 100%;
+    z-index: -1;
+ }
+ .section2 .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+ }
+.section2 .top-text h1{
+    color: white;
+    font-size: 4vw;
+    width: 50vw;
+}
+.section2 .top-text p{
+    font-size: 1vw;
+    color: white;
+    width: 37vw;
+    margin: 1vw 0;
+}
+.section2 .top-text button{
+    padding: 0.7vw 1vw;
+    font-size: 1vw;
+    background-color: #cc4742;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-bottom: 3vw;
+}
+.section2 .top-text button:hover{
+    background-color: #851b17;
+    cursor: pointer;
+}
+.section2  .text{
+    padding: 6vw 5vw;
+    
+}
+.section2 .bottom-text{
+    display: flex;
+    gap: 1.5vw;
+}
+.section2 .bottom-text .first{
+    border-top: 1px solid gray;
+    width: 20vw;
+}
+.section2 .bottom-text .first p{
+    font-size: 0.6vw;
+    letter-spacing: 0.25vw;
+    margin: 1.3vw 0;
+    color: white;
+}
+.section2 .bottom-text .first h1{
+    font-size: 1vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw
+}
+.section2 .bottom-text .first svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #fff;
+    rotate: -40deg;
+}
+.section2 .bottom-text .first svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+.section2 .bottom-text .first svg circle:hover{
+    fill: #851b17;
+}
+.section3{
+    height: 100%;
+    width: 100%;
+}
+.section3 .text{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+    padding-top: 5vw;
+}
+.section3 .text h1{
+    font-size: 2.5vw;
+    font-weight: bolder;
+    
+}
+.section3 .text p{
+    font-size: 1.2vw;
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    gap: 0.5vw;
+}
+.section3 .text p svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #fff;
+    rotate: -40deg;
+}
+.section3 .text p svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+.section3 .text p svg circle:hover{
+    fill: #851b17;
+}
+.section3 .image{
+    display: flex;
+    gap: 1vw;
+    margin-top: 3vw;
+    margin-left: 17vw;
+    position: relative;
+}
+.section3 .image .text1{
+    position: absolute;
+    color: white;
+}
+.section3 .image .text1 span{
+    padding: 1vw 1vw;
+    letter-spacing: 0.3vw;
+    font-size: 0.5vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    position: relative;
+    z-index: 10;
+}
+.section3 .image .text1 svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #ffffff;   
+}
+.section3 .image .text1 p{
+    font-size: 0.5vw;
+    letter-spacing: 0.3vw;
+    padding: 0 1vw;
+    margin-top: 11vw;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 10;
+}
+.section3 .image1 .shade{
+    position: absolute;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(255, 255, 255, 0));
+    height: 20vw;
+    width: 50vw;
+    z-index: 8;
+    pointer-events: none;
+}
+.section3 .image .text1 h1{
+    font-size: 1.5vw;
+    width: 37vw;
+    padding: 0.5vw 1vw;
+    position: relative;
+    z-index: 10;
+}
+.section3 .imageq .text1 h1{
+    font-size: 1.1vw;
+    width: 16vw;    
+    position: relative;
+    z-index: 10; 
+}
+.section3 .imageq .text1 p{
+    font-size: 0.5vw;
+    letter-spacing: 0.3vw;
+    padding: 0 1vw;
+    margin-top: 11vw;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 10;
+}
+.section3 .image2 .text2 span{
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 0.5vw;
+    padding: 1vw 1vw;
+    letter-spacing: 0.3vw;
+    z-index: 9;
+}
+.section3 .image2 .text2 span svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #ffffff;
+    cursor: pointer;
+}
+.section3 .image2 .text2 P{
+    position: absolute;
+    padding: 1vw 1vw;
+    margin-top: 4vw;
+    color: white;
+    font-size: 0.7vw;
+    letter-spacing: 0.2vw;
+}
+.section3 .image2 .text2 h1{
+    margin-top: 5vw;
+    width: 13vw;
+}
+.section3 .image .image1 img{
+    height: 20vw;
+    width: 32vw;
+    object-fit: cover;
+}
+.section3 .image .imageq{
+    display: flex;
+    height: 20vw;
+    width: 17vw;
+    position: relative;
+}
+.section3 .image .imageq img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.section3 .images .image2{
+    gap: 1vw;
+    position: relative;
+}
+.section3 .images .image2 img{
+    height: 10vw;
+    width: 17vw;
+    object-fit: cover;
+}
+.section3 .images .image2{
+    gap: 1vw;
+    position: relative;
+}
+.section3 .images .image2 img{
+    height: 10vw;
+    width: 17vw;
+    object-fit: cover;
+}
+.section3 .image h1{
+    position: absolute;
+    color: white;
+    font-size: 1vw;
+    padding: 1vw 1vw;
+}
+.section3 .images h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    top: 0;
+}
+.section3 .bottom{
+    padding: 2vw 17vw;
+    display: flex;
+}
+.section3 .bottom .one{
+    display: flex;
+    gap: 1.2vw;
+    align-items: center;
+}
+.section3 .bottom .one img{
+    height: 4.5vw;
+    width: 4.5vw;
+    border-radius: 3vw;
+}
+.section3 .bottom .one p{
+    color: rgb(0, 0, 0);
+    font-size: 0.5vw;
+    letter-spacing: 0.3vw;
+    padding-bottom: 0.5vw;
+}
+.section3 .bottom .one h1{
+    font-size: 0.8vw;
+    width: 12vw;
+}
+.section3 .bottom .one span{
+    color: #080808cc;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 0.5vw;
+    padding-top: 1vw;
+    letter-spacing: 0.3vw;
+    z-index: 9;
+}
+.section3 .bottom .one span svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #424242;
+    cursor: pointer;
+}
+.section4{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.section4 .video{
+    height: 47vw;
+    object-fit: cover;
+    position: relative;
+}
+.section4 .video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.section4 .shade{
+    position: absolute;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.774), rgba(255, 255, 255, 0));
+    height: 47vw;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.section4 .text3{
+    position: absolute;
+    top: 0;
+    padding: 15vw 15vw;
+}
+.section4 .text3 h1{
+    color: white;
+    font-size: 4vw;
+    position: relative;
+    width: 26vw;
+    z-index: 15;
+}
+.section4 .text3 p{
+    font-size: 1vw;
+    color: white;
+    width: 36vw;
+    margin-top: 3vw;
+    position: relative;
+    z-index: 11;
+}
+.section4 .text3 span{
+    color: white;
+    position: relative;
+    z-index: 12;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 1.5vw
+}
+.section4 .text3 span svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #fff;
+    cursor: pointer;
+    rotate: -40deg;
+}
+.section4 .text3 span svg circle:hover{
+    fill: #851b17;
+}
+.section4 .text3 span svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+.section5{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 3vw;
+}
+.section5 .text5{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+    padding-top: 5vw;
+}
+.section5 .text5 h1{
+    font-size: 2.5vw;
+    font-weight: bolder;
+}
+.section5 .text5 p{
+    font-size: 1.2vw;
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    gap: 0.5vw;
+}
+.section5 .text5 p svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #fff;
+    rotate: -40deg;
+}
+.section5 .text5 p svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+.section5 .text5 p svg circle:hover{
+    fill: #851b17;
+}
+.section5 .flex{
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 17vw;
+    position: relative;
+    gap: 1vw;
+}
+.section5 .flex .shade{
+    position: absolute;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.774), rgba(255, 255, 255, 0));
+    height: 23vw;
+    width: 16vw;
+    z-index: 1;
+    pointer-events: none;
+}
+.section5 .flex .two img{
+    height: 23vw;
+    width: 16vw;
+    object-fit: cover;
+}
+.section5 .flex .two h1{
+    position: absolute;
+    top: 0;
+    color: white;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding-top: 18vw;
+    margin-left: 1vw;
+    font-size: 1.5vw;
+}
+.section5 .flex .two svg{
+    height: 1.5vw;
+    width: 1.5vw;
+    fill: #fff;
+}
+.section5 .flex .two svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+.section5 .flex .two svg circle:hover{
+    fill: #851b17;
+}
+
+
+/* section6 */
+.section6{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.section6 .videos{
+    height: 47vw;
+    object-fit: cover;
+    
+}
+.section6 .videos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.section6 .shade{
+    position: absolute;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.774), rgba(255, 255, 255, 0));
+    height: 47vw;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.section6 .text3{
+    position: absolute;
+    top: 0;
+    padding: 10vw 15vw;
+}
+.section6 .text3 h1{
+    color: white;
+    font-size: 4vw;
+    position: relative;
+    width: 26vw;
+    z-index: 20;
+}
+.section6 .text3 p{
+    font-size: 1vw;
+    color: white;
+    width: 36vw;
+    margin-top: 3vw;
+    position: relative;
+    z-index: 20;
+}
+.section6 .text3 span{
+    color: white;
+    position: relative;
+    z-index: 20;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 1.5vw
+}
+.section6 .text3 span svg{
+    height: 1vw;
+    width: 1vw;
+    fill: #fff;
+    cursor: pointer;
+    rotate: -40deg;
+}
+.section6 .text3 span svg circle:hover{
+    fill: #851b17;
+}
+.section6 .text3 span svg circle{
+    fill: #ffffff;
+    fill: #ff0000;
+    cursor: pointer;
+}
+
+
+
+.dropdown-menu.show {
+    display: block; /* Show when "show" class is added */
+  }
